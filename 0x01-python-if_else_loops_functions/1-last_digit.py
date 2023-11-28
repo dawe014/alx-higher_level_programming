@@ -7,8 +7,8 @@ if number < 0:
     digit = -digit
 print(f"Last digit of {number:d} is {digit:d} and is ", end="")
 if digit > 5:
-    print("greater than 5")
+    print("greater than 5\n")
 elif digit == 0:
-    print("0")
+    print("0\n")
 else:
-    print("less than 6 and not 0")
+    print("less than 6 and not 0\n")
