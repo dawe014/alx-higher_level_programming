@@ -2,17 +2,16 @@
 # 5-square.py
 """A module that defines a square """
 
-
 class Square:
     """A class that represents a square"""
 
-    def init(self, size=0):
+    def __init__(self, size=0):
         """Initializing this square class
         Args:
-            size: represnets the size of the square defined
+            size: Represents the size of the square defined
         Raises:
-            TypeError: if size is not integer
-            ValueError: if size is less than zero
+            TypeError: If size is not an integer
+            ValueError: If size is less than zero
         """
 
         if not isinstance(size, int):
@@ -25,11 +24,11 @@ class Square:
     @property
     def size(self):
         """Retrieves size of square"""
-
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Sets the size of the square"""
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
         if value < 0:
@@ -38,17 +37,21 @@ class Square:
 
     def area(self):
         """
-        Calculate area of the square
+        Calculate the area of the square
         Returns: The square of the size
         """
 
-        return (self.__size ** 2)
+        return self.__size ** 2
 
     def my_print(self):
-        """print the square in # """
+        """Print the square in #"""
 
         if self.__size == 0:
             print()
+        else:
+            for i in range(self.__size):
+                print("#" * self.__size)
 
-        for i in range(self.__size):
-            print("#" * self.__size)
+# Example usage:
+# square = Square(3)
+# square.my_print()

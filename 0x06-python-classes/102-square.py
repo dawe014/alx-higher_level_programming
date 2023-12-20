@@ -2,9 +2,9 @@
 """My square module"""
 
 class Square:
-    """defines a square"""
+    """Defines a square"""
 
-    def init(self, size=0):
+    def __init__(self, size=0):
         """Create a Square
         Args: size: length of a side of Square
         """
@@ -12,10 +12,10 @@ class Square:
 
     @property
     def size(self):
-        """"The propery of size as the len of a side of Square
+        """The property of size as the length of a side of Square
         Raises:
-            TypeError: if size != int
-            ValueErrorr: if size < 0
+            TypeError: if size is not an int
+            ValueError: if size < 0
         """
         return self.__size
 
@@ -50,3 +50,13 @@ class Square:
 
     def eq(self, other):
         return self.area() == other.area()
+
+# Example usage:
+# square1 = Square(3)
+# square2 = Square(2)
+# print(square1.le(square2))
+# print(square1.lt(square2))
+# print(square1.ge(square2))
+# print(square1.ne(square2))
+# print(square1.gt(square2))
+# print(square1.eq(square2))

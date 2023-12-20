@@ -6,12 +6,12 @@
 class Square:
     """A class that represents a square"""
 
-    def init(self, size=0):
+    def __init__(self, size=0):
         """Initializing this square class
         Args:
-            size: represnets the size of the square defined
+            size: represents the size of the square defined
         Raises:
-            TypeError: if size is not integer
+            TypeError: if size is not an integer
             ValueError: if size is less than zero
         """
 
@@ -24,8 +24,8 @@ class Square:
 
     def area(self):
         """
-        Calculate area of the square
+        Calculate the area of the square
         Returns: The square of the size
         """
 
-        return (self.__size ** 2)
+        return self.__size ** 2
