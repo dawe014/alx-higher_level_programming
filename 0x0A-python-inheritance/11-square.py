@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""Defines a Rectangle subclass Square."""
-import importlib
+"""Sqaure #2 Module"""
+class Square(__import__('9-rectangle').Rectangle):
+    """Square Class"""
 
-module_name = '9-rectangle'
-module = importlib.import_module(module_name)
-Rectangle = module.Rectangle
-
-class Square(Rectangle):
-    """Represent a square."""
     def __init__(self, size):
-        """Initialize a new square.
-        Args:
-            size (int): The size of the new square.
-        """
-        self.integer_validator("size", size)
-        super().__init__(size, size)
+        """Initializes the square"""
+
+        super().integer_validator('size', size)
         self.__size = size
+    def area(self):
+        """Calculates the area"""
+
+        return self.__size * self.__size
+    def __str__(self):
+        """Return a formatted string to be printed"""
+        return '[Square] {0}/{0}'.format(self.__size)
