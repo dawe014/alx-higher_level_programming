@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Sqaure #1 Module"""
 class Square(__import__('9-rectangle').Rectangle): 
     """Square Class"""
     def __init__(self, size):
