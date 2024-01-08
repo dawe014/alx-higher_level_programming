@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Defines a function that adds attributes to objects."""
-def add_attribute(obj, att, value):
-    
-    if not hasattr(obj, "__dict__"):
+""" add_attribute module """
+def add_attribute(prmObject, prmName, prmValue):
+    """ add_attribute function """
+    if not hasattr(prmObject, "__dict__"):
         raise TypeError("can't add new attribute")
-    setattr(obj, att, value)
+    if (not hasattr(prmObject, prmName)):
+        prmObject.__setattr__(prmName, prmValue)
