@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-def add_attribute(obj, attr, value):
-    """Adds a new attribute to an object"""
-    if isinstance(obj, (int, float, complex, bool, str, tuple, range,
-                        frozenset, bytes)):
+"""Defines a function that adds attributes to objects."""
+def add_attribute(obj, att, value):
+    
+    if not hasattr(obj, "dict"):
         raise TypeError("can't add new attribute")
-    obj.__setattr__(attr, value)
+    setattr(obj, att, value)
