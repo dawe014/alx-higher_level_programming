@@ -1,9 +1,10 @@
 0-add_integer Module:
 =====================
 
+
 Import "add_integer" from "0-add_integer' module
 
-       >>> add_integer = import('0-add_integer').add_integer
+       >>> add_integer = __import__('0-add_integer').add_integer
 
 Should return sum of two positive integers:
 
