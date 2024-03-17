@@ -28,17 +28,10 @@ def get_states(user, passwd, dbname):
             return rows
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    # Check if correct number of command-line arguments provided
-    if len(sys.argv) != 4:
-        print("Usage: <username> <password> <database>")
-        sys.exit(1)
-=======
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
     c.execute("SELECT * FROM `states`")
     [print(state) for state in c.fetchall()]
->>>>>>> ae405752667c66010b76fcb942b222a76c7e4ff6
 
     # Get command-line arguments
     user = sys.argv[1]
